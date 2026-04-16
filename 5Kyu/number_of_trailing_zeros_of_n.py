@@ -1,7 +1,9 @@
 # https://www.codewars.com/kata/52f787eb172a8b4ae1000a34
 
-import math
-
 
 def zeros(n):
-    return sum(n // 5**k for k in range(1, math.floor(math.log(n, 5)) + 1)) if n else 0
+    m = n
+    s = 0
+    while m := m // 5:
+        s += m
+    return s
