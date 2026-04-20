@@ -9,11 +9,14 @@ def format_prime_factors(f):
 
 def prime_factors(n):
     m = n
-    i = 2
+    i = 3
     f = collections.defaultdict(int)
+    while m % 2 == 0:
+        f[2] += 1
+        m //= 2
     while m >= i * i:
         if m % i:
-            i += 1
+            i += 2
         else:
             m //= i
             f[i] += 1
