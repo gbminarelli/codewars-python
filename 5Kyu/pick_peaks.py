@@ -3,11 +3,12 @@
 
 def pick_peaks(arr):
     p = {"pos": [], "peaks": []}
-    if not arr:
+    n = len(arr)
+    if n < 3:
         return p
     a = arr[0]
     p_index = None
-    for i in range(1, len(arr)):
+    for i in range(1, n):
         b = arr[i]
         if a < b:
             p_index = i
