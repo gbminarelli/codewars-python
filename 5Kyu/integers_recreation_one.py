@@ -15,8 +15,9 @@ def prime_factors(n):
         if m % i:
             i += 2
         else:
-            m //= i
-            f[i] += 1
+            while m % i == 0:
+                m //= i
+                f[i] += 1
     if m > 1:
         f[m] += 1
     return f
