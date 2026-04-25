@@ -25,6 +25,6 @@ class PaginationHelper:
     def page_index(self, item_index):
         return (
             -1
-            if item_index < 0 or item_index > self.item_count() - 1
+            if item_index < 0 or item_index >= self.item_count()
             else item_index // self.items_per_page
         )
